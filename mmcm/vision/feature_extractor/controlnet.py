@@ -227,7 +227,6 @@ class ControlnetFeatureExtractor(BaseFeatureExtractor):
     ):
         super().__init__(device, dtype, name)
         self.model_path = model_path
-        # refer /group/30065/users/anchorxia/proj/VideoCreation/videocreation/pipelines/pipeline_controlnet.py::prepare_image
         self.processor = ControlnetProcessor(
             detector_name=detector_name,
             detector_id=detector_id,
@@ -246,8 +245,6 @@ class ControlnetFeatureExtractor(BaseFeatureExtractor):
             model_path,
         ).to(device=device, dtype=dtype)
         self.detector_name = detector_name
-
-    # refer /group/30065/users/anchorxia/proj/VideoCreation/videocreation/pipelines/pipeline_controlnet.py::prepare_image
 
     def emb_name(self, width, height):
         return "{}_w={}_h={}_emb".format(self.name, width, height)
@@ -906,7 +903,6 @@ def load_controlnet_model(
     return controlnet, controlnet_processor, processor_params
 
 
-# copy from /cfs-datasets/users/anchorxia/proj/VideoCreation/videocreation/pipelines/pipeline_controlnet.py
 def prepare_image(
     image,  # b c t h w
     image_processor: Callable,
