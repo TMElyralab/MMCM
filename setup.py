@@ -27,7 +27,7 @@ setup(
     # include_package_data=True,  # please edit MANIFEST.in
     # py_modules=["mmcm"],
     packages=find_packages("mmcm"),
-    package_dir={"": "mmcm"},
+    # package_dir={"": "mmcm"},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
