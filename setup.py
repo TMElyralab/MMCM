@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 import subprocess
+import os
 
 from setuptools import setup, find_packages
 
+ProjectDir = os.path.dirname(__file__)
 result = subprocess.run(["pip", "install", "basicsr"], capture_output=True, text=True)
 
-with open("requirements.txt", "r") as f:
+
+with open(os.path.join(ProjectDir, "requirements.txt"), "r") as f:
     requirements = f.read().splitlines()
 requirements = [x for x in requirements if x and not x.startswith("#")]
 requirements = [x.split(" ")[0] if "index-url" in x else x for x in requirements]
@@ -22,6 +25,7 @@ setup(
     # long_description_content_type="text/markdown",
     url="https://github.com/TMElyralab/MMCM",
     # include_package_data=True,  # please edit MANIFEST.in
+    # py_modules=["mmcm"],
     packages=find_packages("mmcm"),
     package_dir={"": "mmcm"},
     classifiers=[
@@ -30,7 +34,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires=requirements,
-    dependency_links=["https://download.pytorch.org/whl/cu118"],
+    # dependency_links=["https://download.pytorch.org/whl/cu118],
 )
 
 
