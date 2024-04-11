@@ -37,8 +37,8 @@ setup(
     # long_description=long_description,
     # long_description_content_type="text/markdown",
     url="https://github.com/TMElyralab/MMCM",
-    packages=find_packages("mmcm"),
-    package_dir={"": "mmcm"},
+    packages=find_packages("."),
+    package_dir={"": "."},
     # include_package_data=True,  # please edit MANIFEST.in
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -46,5 +46,4 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires=requirements,
-    # dependency_links=["https://download.pytorch.org/whl/cu118],
 )
