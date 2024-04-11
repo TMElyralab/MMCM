@@ -5,6 +5,10 @@ from setuptools import setup, find_packages
 with open("requirements.txt", "r") as f:
     requirements = f.read().splitlines()
 requirements = [x for x in requirements if x and not x.startswith("#")]
+requirements = [x.split(" ")[0] if "index-url" in x else x for x in requirements]
+print("requirements")
+print(requirements)
+
 setup(
     name="mmcm",  # used in pip install
     version="1.0.0",
