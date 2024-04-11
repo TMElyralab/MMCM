@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import subprocess
 import os
+import pkg_resources
 
 from setuptools import setup, find_packages
 
@@ -12,8 +13,6 @@ with open(os.path.join(ProjectDir, "requirements.txt"), "r") as f:
     requirements = f.read().splitlines()
 requirements = [x for x in requirements if x and not x.startswith("#")]
 requirements = [x.split(" ")[0] if "index-url" in x else x for x in requirements]
-print("requirements")
-print(requirements)
 
 setup(
     name="mmcm",  # used in pip install
@@ -27,7 +26,7 @@ setup(
     # include_package_data=True,  # please edit MANIFEST.in
     # py_modules=["mmcm"],
     packages=find_packages("mmcm"),
-    # package_dir={"": "mmcm"},
+    package_dir={"": "mmcm"},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
