@@ -3,6 +3,7 @@ import subprocess
 
 from setuptools import setup, find_packages
 
+result = subprocess.run(["pip", "install", "basicsr"], capture_output=True, text=True)
 
 with open("requirements.txt", "r") as f:
     requirements = f.read().splitlines()
