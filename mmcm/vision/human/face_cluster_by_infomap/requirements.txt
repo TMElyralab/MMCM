@@ -1,6 +1,0 @@
-tqdm
-numpy>=1.18.1
-scipy
-sklearn
-infomap
-faiss-gpu

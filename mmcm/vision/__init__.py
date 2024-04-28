@@ -1,7 +1,5 @@
 from .human import (
     InsightfacePredictor,
-    FaceTrackerByYolo5DeepSort,
-    FaceClusterByInfomap,
 )
 
 # wenlan depenon detectron2, which often failed, and would be removed
