@@ -57,7 +57,7 @@ RUN source ~/.bashrc \
     # 安装一堆包
     && pip install --no-cache-dir transformers bitsandbytes decord accelerate xformers omegaconf einops imageio==2.31.1 \
     && pip install --no-cache-dir pandas h5py matplotlib modelcards pynvml black pytest moviepy torch-tb-profiler scikit-learn librosa ffmpeg easydict webp controlnet_aux mediapipe \
-    && pip install --no-cache-dir Cython easydict gdown infomap insightface ipython librosa onnx onnxruntime onnxsim opencv_python Pillow protobuf pytube PyYAML \
+    && pip install --no-cache-dir Cython easydict gdown insightface ipython librosa onnx onnxruntime onnxsim opencv_python Pillow protobuf pytube PyYAML \
     && pip install --no-cache-dir requests scipy six tqdm gradio albumentations opencv-contrib-python imageio-ffmpeg pytorch-lightning test-tube \
     && pip install --no-cache-dir timm addict yapf prettytable safetensors basicsr fvcore pycocotools wandb gunicorn \
     && pip install --no-cache-dir streamlit webdataset kornia open_clip_torch streamlit-drawable-canvas torchmetrics \

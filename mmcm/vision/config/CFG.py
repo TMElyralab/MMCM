@@ -48,7 +48,7 @@ CFG.SemanticsAlgo = "wenlan"
 CFG.ClipTransitionAlgo = "TransnetV2"
 CFG.SscneTransitionAlgo = "SceneSeg"
 CFG.FaceAlgo = "insightface"
-CFG.TrackAlgo = "deepsort"
+CFG.TrackAlgo = "Tracktor"
 
 # 剪辑相关配置
 # 颜色可参考：http://www1.ynao.ac.cn/~jinhuahe/know_base/othertopics/computerissues/RGB_colortable.htm
